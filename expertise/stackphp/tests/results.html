@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stack.PHP Test Results</title>
+<style type='text/css'>
+
+body {
+    font-family: arial, sans, helvetica;
+    margin: 4px 24px;
+}
+
+pre a {
+    color: #00f;
+    text-decoration: none;
+}
+
+pre a:hover {
+    color: #55f;
+    text-decoration: underline;
+}
+
+.status .passed {
+    color: #090;
+    font-weight: bold;
+}
+
+.status .failed {
+    color: #f00;
+    font-weight: bold;
+}
+
+.test {
+    background-color: #eee;
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.test .name {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.test .description {
+    font-style: italic;
+}
+
+.test .duration {
+    display: block;
+    margin-top: 12px;
+}
+
+.test .status {
+    display: block;
+}
+
+.output, .exception {
+    margin: 8px 20px;
+}
+
+.output .label, .exception .label {
+    display: block;
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+.output pre, .exception pre {
+    margin-bottom: 24px;
+    max-height: 200px;
+    overflow-y: auto;
+    word-wrap: break-word;
+}
+
+.exception pre {
+    color: #900;
+}
+
+.footer {
+    font-size: 10pt;
+}
+
+</style>
+</head>
+<body>
+<h2>Stack.PHP Test Results</h2>
+<p>
+  <span class='status'><b>Status:</b> <span class='failed'>1 test(s) failed</span></span><br />
+  <b>Timing:</b> began <i>Fri, 05 Feb 2016 15:11:00 +0100</i> and completed in <i>16.17 seconds</i><br />
+</p>
+<div class="test">
+  <span class="name">API Routes</span>
+  <span class="description">Performs an exhaustive test of all site-specific routes, ensuring that returned data matches the specified criterion.</span>
+  <span class="duration">Duration: 1.61 seconds</span>
+  <span class="status">Status: <span class="failed">Failed</span></span>
+</div>
+<div class="output">
+  <span class="label">Output:</span>
+  <pre>* /answers
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/answers?filter=%21-q2RjmDn&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;site=askubuntu&amp;page=1" target="_blank">http://api.stackexchange.com/2.0/answers?filter=%21-q2RjmDn&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;site=askubuntu&amp;page=1</a>
+* /answers/{IDs}
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/answers/2;10?filter=%21-q2RjmDn&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;site=askubuntu&amp;page=1" target="_blank">http://api.stackexchange.com/2.0/answers/2;10?filter=%21-q2RjmDn&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;site=askubuntu&amp;page=1</a>
+* /answers/{IDs}/comments
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/answers/2;10/comments?filter=%21-q2RjmDn&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;site=askubuntu&amp;page=1" target="_blank">http://api.stackexchange.com/2.0/answers/2;10/comments?filter=%21-q2RjmDn&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;site=askubuntu&amp;page=1</a>
+</pre>
+</div><div class="exception">
+    <span class="label">Exceptions:</span>
+    <pre>Fewer than 6 items were returned in the response body. [api_test.php:28]</pre>
+</div><div class="test">
+  <span class="name">Cache</span>
+  <span class="description">Tests the SQL cache to ensure that data can be stored and retrieved correctly and ensures that the TTL value is respected.</span>
+  <span class="duration">Duration: 6.73 seconds</span>
+  <span class="status">Status: <span class="passed">Passed</span></span>
+</div>
+<div class="output">
+  <span class="label">Output:</span>
+  <pre>* Testing SQL cache...
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/questions?filter=%21-q2RjmDn&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;site=stackapps&amp;page=1" target="_blank">http://api.stackexchange.com/2.0/questions?filter=%21-q2RjmDn&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;site=stackapps&amp;page=1</a>
+[DEBUG]: Found <a href="http://api.stackexchange.com/2.0/questions?filter=%21-q2RjmDn&amp;site=stackapps&amp;page=1" target="_blank">http://api.stackexchange.com/2.0/questions?filter=%21-q2RjmDn&amp;site=stackapps&amp;page=1</a> in cache.
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/questions?filter=%21-q2RjmDn&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;site=stackapps&amp;page=1" target="_blank">http://api.stackexchange.com/2.0/questions?filter=%21-q2RjmDn&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;site=stackapps&amp;page=1</a>
+* Testing Filestore cache...
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/questions?filter=%21-q2RjmDn&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;site=stackapps&amp;page=1" target="_blank">http://api.stackexchange.com/2.0/questions?filter=%21-q2RjmDn&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;site=stackapps&amp;page=1</a>
+[DEBUG]: Found <a href="http://api.stackexchange.com/2.0/questions?filter=%21-q2RjmDn&amp;site=stackapps&amp;page=1" target="_blank">http://api.stackexchange.com/2.0/questions?filter=%21-q2RjmDn&amp;site=stackapps&amp;page=1</a> in cache.
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/questions?filter=%21-q2RjmDn&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;site=stackapps&amp;page=1" target="_blank">http://api.stackexchange.com/2.0/questions?filter=%21-q2RjmDn&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;site=stackapps&amp;page=1</a>
+</pre>
+</div><div class="test">
+  <span class="name">Filter</span>
+  <span class="description">Tests the functionality of filters to ensure that responses contain the specified fields and that HTML data is properly escaped according to the filter's settings.</span>
+  <span class="duration">Duration: 1.35 seconds</span>
+  <span class="status">Status: <span class="passed">Passed</span></span>
+</div>
+<div class="output">
+  <span class="label">Output:</span>
+  <pre>[DEBUG]: Issuing POST request <a href="http://api.stackexchange.com/2.0/filters/create?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;unsafe=false" target="_blank">http://api.stackexchange.com/2.0/filters/create?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;unsafe=false</a>
+  include =&gt; 'answer.link'
+  exclude =&gt; 'answer.score'
+[DEBUG]: Created filter '!--pn9sU(S(1x'.
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/answers?filter=%21--pn9sU%28S%281x&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;site=stackoverflow&amp;page=1" target="_blank">http://api.stackexchange.com/2.0/answers?filter=%21--pn9sU%28S%281x&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;site=stackoverflow&amp;page=1</a>
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/filters/!--pn9sU(S(1x?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28" target="_blank">http://api.stackexchange.com/2.0/filters/!--pn9sU(S(1x?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28</a>
+</pre>
+</div><div class="test">
+  <span class="name">Global Methods</span>
+  <span class="description">Tests all of the global methods (except for those covered by other tests) to ensure that data is returned in the expected format.</span>
+  <span class="duration">Duration: 5.97 seconds</span>
+  <span class="status">Status: <span class="passed">Passed</span></span>
+</div>
+<div class="output">
+  <span class="label">Output:</span>
+  <pre>[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=1" target="_blank">http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=1</a>
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=2" target="_blank">http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=2</a>
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=3" target="_blank">http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=3</a>
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=4" target="_blank">http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=4</a>
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=5" target="_blank">http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=5</a>
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=6" target="_blank">http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=6</a>
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=7" target="_blank">http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=7</a>
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=8" target="_blank">http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=8</a>
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=9" target="_blank">http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=9</a>
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=10" target="_blank">http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=10</a>
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=11" target="_blank">http://api.stackexchange.com/2.0/sites?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=11</a>
+[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/users/1/associated?filter=%21-q2RjmDn&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=1" target="_blank">http://api.stackexchange.com/2.0/users/1/associated?filter=%21-q2RjmDn&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;page=1</a>
+</pre>
+</div><div class="test">
+  <span class="name">Question</span>
+  <span class="description">Tests the QuestionRequest object to ensure that the correct URLs are generated as parameters and methods are modified.</span>
+  <span class="duration">Duration: 0.38 seconds</span>
+  <span class="status">Status: <span class="passed">Passed</span></span>
+</div>
+<div class="output">
+  <span class="label">Output:</span>
+  <pre>[DEBUG]: Issuing GET request <a href="http://api.stackexchange.com/2.0/questions/no-answers?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;site=stackapps.com&amp;sort=votes&amp;min=8&amp;page=1" target="_blank">http://api.stackexchange.com/2.0/questions/no-answers?filter=%21-q2RjmHZ&amp;key=ABqBaKNdubSh1TTyhKC35w%28%28&amp;site=stackapps.com&amp;sort=votes&amp;min=8&amp;page=1</a>
+</pre>
+</div><div class="test">
+  <span class="name">URL</span>
+  <span class="description">Verifies that parameters passed to the URL class result in properly constructed URLs.</span>
+  <span class="duration">Duration: 0.00 seconds</span>
+  <span class="status">Status: <span class="passed">Passed</span></span>
+</div>
+<div class="output">
+  <span class="label">Output:</span>
+  <pre>[no output]</pre>
+</div><div class="test">
+  <span class="name">User</span>
+  <span class="description">Tests the UserRequest object to ensure that the correct URLs are generated as parameters, methods, and access tokens are modified.</span>
+  <span class="duration">Duration: 0.00 seconds</span>
+  <span class="status">Status: <span class="passed">Passed</span></span>
+</div>
+<div class="output">
+  <span class="label">Output:</span>
+  <pre>[no output]</pre>
+</div>
+<br /><hr />
+<span class="footer">
+  Total requests processed: <b>25</b> - Total API requests made: <b>23</b>
+</span>
+</body>
+</html>

@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Expertise Analyzer</title>
+	<!-- BOOTSTRAP MIN JS -->
+	<script src="assets/js/bootstrap.min.js" type="script"></script>
+	<script src="assets/js/jquery-1.12.0.min.js" type="script"></script>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME CSS -->
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+	
+     <!-- FLEXSLIDER CSS -->
+<link href="assets/css/flexslider.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />    
+  <!-- Google	Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
+</head>
+<body >
+   
+ <div class="navbar navbar-inverse navbar-fixed-top " id="menu">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#home"><img class="logo-custom" src="assets/img/logo.png" alt="EXPERTISE ANALYZER"  /></a>
+            </div>
+            <div class="navbar-collapse collapse move-me">
+                <ul class="nav navbar-nav navbar-right">
+                    <li ><a href="#home">HOME</a></li>
+                     <li><a href="#create-sec">CREATE PROFILE</a></li>
+                   
+                     <li><a href="#contact-sec">ABOUT US</a></li>
+                </ul>
+            </div>
+           
+        </div>
+    </div>
+      <!--NAVBAR SECTION END-->
+       <div class="home-sec" id="home" >
+           <div class="overlay">
+ <div class="container">
+           <div class="row text-center " >
+           
+               <div class="col-lg-12  col-md-12 col-sm-12">
+               
+                <div class="flexslider set-flexi" id="main-section" >
+                    <ul class="slides move-me">
+                        <!-- Slider 01 -->
+                        <li>
+                              <h3>Explore your skills in Computer Science</h3>
+                           <h1>SHARE YOUR ACHIEVEMENTS</h1>
+                            <a  href="#create-sec" class="btn btn-info btn-lg" >
+                                FIRST TIME HERE? 
+                            </a>
+							
+                        </li>
+                        <!-- End Slider 01 -->
+                        
+                        <!-- Slider 02 -->
+                        <li>
+                            <h3>Explore your skills in Computer Science</h3>
+                           <h1>MAKE YOUR PROFILE</h1>
+                             <a  href="#create-sec" class="btn btn-primary btn-lg" >
+                               FIRST TIME HERE? 
+                            </a>
+							
+                            
+                        </li>
+                        <!-- End Slider 02 -->
+                        
+                        <!-- Slider 03 -->
+                        <li>
+                            <h3>Explore your skills in Computer Science</h3>
+                           <h1>IMPROVE YOURSELF</h1>
+                             <a  href="#create-sec" class="btn btn-default btn-lg" >
+                                FIRST TIME HERE? 
+                            </a>
+							
+                           
+                        </li>
+                        <!-- End Slider 03 -->
+                    </ul>
+                </div>
+                   
+     
+              
+              
+            </div>
+                
+               </div>
+                </div>
+           </div>
+           
+       </div>
+       <!--HOME SECTION END-->   
+    <div  class="tag-line" >
+         <div class="container">
+           <div class="row  text-center" >
+           
+               <div class="col-lg-12  col-md-12 col-sm-12">
+               
+        <h2 data-scroll-reveal="enter from the bottom after 0.1s" ><i class="fa fa-circle-o-notch"></i> WELCOME TO EXPERTISE ANALYZER <i class="fa fa-circle-o-notch"></i> </h2>
+                   </div>
+               </div>
+             </div>
+        
+    </div>
+    <!--HOME SECTION TAG LINE END-->   
+         <div id="create-sec" class="container set-pad" >
+             <div class="row text-center">
+                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                     <h1 data-scroll-reveal="enter from the bottom after 0.2s"  class="header-line">FIRST TIME HERE? </h1>
+                     <p data-scroll-reveal="enter from the bottom after 0.3s" >
+                      We need some of your information to help us create your profile!
+                         </p>
+                 </div>
+
+             </div>
+             <!--/.HEADER LINE END-->
+
+
+           <div class="row" >
+           
+               
+                 <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
+                     <div class="about-div">
+                     <i class="fa fa-github fa-4x icon-round-border" ></i>
+                   <h4 ><strong>Github Username: </strong><a id="github-tooltip" href="#" data-toggle="tooltip">
+					  <span class="glyphicon glyphicon-question-sign" aria-hidden="true"</span>
+					  </a></h4>
+				   
+
+                 <hr />
+                       
+               <form>
+			   <input type="text" name="github_username">
+			   </form>
+                </div>
+                   </div>
+                   <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
+                     <div class="about-div">
+                     <i class="fa fa-stack-overflow fa-4x icon-round-border" ></i>
+                   <h4 ><strong>Stackoverflow ID: </strong><a id="stackoverflow-tooltip" href="#" data-toggle="tooltip">
+					  <span class="glyphicon glyphicon-question-sign" aria-hidden="true"</span>
+					  </a></h4>
+                
+                       
+                   
+				   <hr/>
+               <form>
+			   <input type="text" name="stackoverflow_id">
+			   </form>
+                </div>
+                   </div>
+                 <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
+                     <div class="about-div">
+                     <i class="fa fa-twitter fa-4x icon-round-border" ></i>
+                   <h4 ><strong>Twitter  Username: </strong><a id="twitter-tooltip" href="#" data-toggle="tooltip">
+					  <span class="glyphicon glyphicon-question-sign" aria-hidden="true"</span>
+					  </a></h4>
+                
+				   <hr/>
+				  
+               <form>
+			   <input type="text" name="twitter_username">
+			   </form>
+                </div>
+                   </div>
+                 
+				 
+                 <div class="row text-center">
+                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                     </br>
+                     <button id="make-profile-btn" type="button "class="btn btn-default"  data-scroll-reveal="enter from the bottom after 0.3s" >
+                     Make your Profile 
+                         </button>
+                 </div>
+
+             </div>
+				 <br>
+				 <br>
+				 
+               </div>
+             </div>
+   <!-- FEATURES SECTION END-->
+    
+    
+    <div id="contact-sec"   >
+           <div class="overlay">
+ <div class="container set-pad">
+      <div class="row text-center">
+                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                     <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line" >ABOUT US  </h1>
+                     <p data-scroll-reveal="enter from the bottom after 0.3s">
+                      This website is made for academic purposes, as the implementation of my thesis in
+					  University of Cyprus.
+					  sdkjhsdjkhsdljkhsdjkl
+					  slkdnklsdjklsjdksjdlks
+					  skdjskldjskldjklsdjlksjdklsjdklsndlksndklsnd
+					  sdklnskdnskldnklsndklskndklsndlksnd
+					  skdnlksdnklsndklsndlknlskdnsdkln
+                         </p>
+						 </br>
+						   <p data-scroll-reveal="enter from the bottom after 0.3s">
+                      This website is made for academic purposes, as the implementation of my thesis in
+					  University of Cyprus.
+					  sdkjhsdjkhsdljkhsdjkl
+					  slkdnklsdjklsjdksjdlks
+					  skdjskldjskldjklsdjlksjdklsjdklsndlksndklsnd
+					  sdklnskdnskldnklsndklskndklsndlksnd
+					  skdnlksdnklsndklsndlknlskdnsdkln
+                         </p>
+						 
+                 </div>
+
+             </div>
+             <!--/.HEADER LINE END-->
+           <div class="row set-row-pad"  data-scroll-reveal="enter from the bottom after 0.5s" >
+           
+               
+                 
+
+                   
+     
+              
+              
+                
+               </div>
+                </div>
+          </div> 
+       </div>
+     <div class="container">
+             <div class="row set-row-pad"  >
+    <div class="col-lg-4 col-md-4 col-sm-4   col-lg-offset-1 col-md-offset-1 col-sm-offset-1 " data-scroll-reveal="enter from the bottom after 0.4s">
+
+                    <h2 ><strong>Contact Us </strong></h2>
+        <hr />
+                    <div>
+                        
+                       <h4><strong>Country: </strong>Cyprus</h4>
+                       
+                        <h4><strong>Email: </strong>pfoutr01@cs.ucy.ac.cy</h4>
+                    </div>
+
+
+                </div>
+                 <div class="col-lg-4 col-md-4 col-sm-4   col-lg-offset-1 col-md-offset-1 col-sm-offset-1" data-scroll-reveal="enter from the bottom after 0.4s">
+
+                    <h2 ><strong>Social Conectivity </strong></h2>
+        <hr />
+                    <div >
+                        <a href="#">  <img src="assets/img/Social/facebook.png" alt="" /> </a>
+                    
+                     <a href="#"> <img src="assets/img/Social/twitter.png" alt="" /></a>
+                    </div>
+                    </div>
+
+
+                </div>
+				</div>
+                 </div>
+     <!-- CONTACT SECTION END-->
+    <div id="footer">
+          &copy 2016 Expertise Analyzer | All Rights Reserved |  <a href="http://binarytheme.com" style="color: #fff" target="_blank">Design by : binarytheme.com</a>
+    </div>
+     <!-- FOOTER SECTION END-->
+   
+    <!--  Jquery Core Script -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!--  Core Bootstrap Script -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!--  Flexslider Scripts --> 
+         <script src="assets/js/jquery.flexslider.js"></script>
+     <!--  Scrolling Reveal Script -->
+    <script src="assets/js/scrollReveal.js"></script>
+    <!--  Scroll Scripts --> 
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <!--  Custom Scripts --> 
+         <script src="assets/js/custom.js"></script>
+		 
+		 
+		  <script>
+					$(document).ready(function(){
+					$('#github-tooltip').tooltip({title: "The username you use to login in Github",
+					html: true, placement: "top"}); 
+						});
+			
+					$(document).ready(function(){
+					$('#stackoverflow-tooltip').tooltip({title:"<p>Move to your Stackoverflow profile.</p><img src='assets/img/stackoverflow_tooltip.png'  width='458' height='177'>",
+					html: true, placement: "top"}); 
+						});
+					
+					$(document).ready(function(){
+					$('#twitter-tooltip').tooltip({title: "The username you use to login in Twitter.",
+					html: true, placement: "top"}); 
+						});
+			</script>
+</body>
+</html>
